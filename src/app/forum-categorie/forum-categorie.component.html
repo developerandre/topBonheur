@@ -1,0 +1,47 @@
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a [routerLink]="['/login']" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons">m</i></a>
+      <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+        <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
+            <div class="site-logo"></div><span class="site-description">Top Bonheur</span></span></div>
+        <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+          <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"><a class="mdl-navigation__link" [routerLink]="['/blog']">Blog</a><a class="mdl-navigation__link" [routerLink]="['/chat']" *ngIf="dataService.logged">Chat</a><a class="mdl-navigation__link" [routerLink]="['/videos']"> Videos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/photos']">Photos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/contact']">Contactez nous</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+            <a class="mdl-navigation__link" [routerLink]="['/blog']">Blog</a><a class="mdl-navigation__link" [routerLink]="['/chat']" *ngIf="dataService.logged">Chat</a><a class="mdl-navigation__link" [routerLink]="['/videos']"> Videos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/photos']">Photos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/contact']">Contactez nous</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="site-content">
+          <div class="container"><div class="mdl-grid site-max-width"><br>    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" *ngFor="let category of categories">
+        <div class="mdl-card__media">
+            <img class="article-image" src="/assets/img/portfolio9.jpg" border="0" alt="">
+        </div>
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">City Scape</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt..
+        </div><br>        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" [routerLink]="['/forum','sfgdfg']">
+            accéder à cette categorie
+          </a>
+        </div>
+    </div>
+</div></div>
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="footer-container">
+            <div class="mdl-logo">&copy; Copyright <a [routerLink]="['/']">Top Bonheur</a></div>
+            <ul class="mdl-mini-footer__link-list">
+              <li><a href="">2017</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>

@@ -1,0 +1,224 @@
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+  <div class="mdl-layout__drawer-button side"><i class="fa fa-bars" style="color:black;"></i></div>       
+ <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="assets/img/bonheur1.jpg" style="width:40px;height:40px;border-radius:50%;">
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="fa fa-search" style="color:black;"></i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#blog">Actualités</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#photos">Galerie</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#about">A propos</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#contact">Contactez-nous</a>
+            </nav>
+          </div>
+          <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="assets/img/android-logo.png">
+          </span>
+          <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+            <i class="fa fa-ellipsis-v" style="color:black;"></i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+            <li class="mdl-menu__item"><a [routerLink]="['/chat']">Chat avec le service client</a></li>
+            <li class="mdl-menu__item"><a [routerLink]="['/forum']">Forum</a></li>
+            <li  class="mdl-menu__item"><a [routerLink]="['/photos']">Nos photos</a></li>
+            <li class="mdl-menu__item"><a [routerLink]="['/videos']">Nos videos</a></li>
+            <li class="mdl-menu__item"><a [routerLink]="['/login']">Se connecter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="assets/img/android-logo-white.png">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#blog">Actualités</a>
+          <a class="mdl-navigation__link" href="#photos">Galerie</a>
+          <a class="mdl-navigation__link" href="#about">A propos</a>
+          <a class="mdl-navigation__link" href="#contact">Contactez-nous</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href=""> Menu </span>
+          <a class="mdl-navigation__link" [routerLink]="['/chat']">Chat avec le service client</a>
+          <a class="mdl-navigation__link" [routerLink]="['/forum']">Forum</a>
+          <a class="mdl-navigation__link" [routerLink]="['/photos']">Nos photos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/videos']">Nos videos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/login']">Se connecter</a>
+        </nav>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="android-be-together-section mdl-typography--text-center">
+          <div class="logo-font android-slogan">Top Bonheur</div>
+          <div class="logo-font android-sub-slogan">Le développement d’une nation, basé sur la consommation des produits locaux.</div>
+          <div class="logo-font android-create-character">
+            <a href="index.html"><img src="assets/img/andy.png">Nous vous invitons à nous faire confiance en adhérant à TOP BONHEUR pour bénéficier des avantages y afférents</a>
+          </div>
+
+          <a href="#about">
+            <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+              <i class="fa fa-chevron-down"></i>
+            </button>
+          </a>
+        </div>
+        <div class="android-screen-section mdl-typography--text-center">
+          <a name="screens"></a>
+          <div class="mdl-typography--display-1-color-contrast">Formation et produits</div>
+          <div class="android-screens">
+            <div class="android-tv android-screen" *ngFor="let formation of formations;let i = index">
+              <a class="android-image-link" id="show-dialog" (click)="showDialog(i)">
+                <img class="android-screen-image" src="assets/img/bonheur18.jpg">
+              </a>
+              <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="index.html">Formation {{i}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="android-wear-section" id="photos">
+          <div class="android-wear-band">
+            <div class="android-wear-band-text">
+              <div class="mdl-typography--display-2 mdl-typography--font-thin">
+  Catalogue des photos de Top Bonheur 
+</div>
+              <p class="mdl-typography--headline mdl-typography--font-thin">
+                Rejoignez nous vite pour passer des moments inoubliables.
+              </p>
+              <p>
+                <a class="mdl-typography--font-regular mdl-typography--text-uppercase android-alt-link" [routerLink]="['/photos']">
+                  Notre galerie&nbsp;<i class="fa fa-chevron-right"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="android-customized-section" id="about">
+          <div class="android-customized-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">A propos de l'association Top Bonheur</div>
+            <p class="mdl-typography--font-light">
+                l’association TOP BONHEUR est créée pour aider, grâce à
+ses services innovants, les populations vulnérables à se prendre en charge par
+l’exercice d’activités génératrices de revenus, la gestion de micro-entreprises et
+l’amélioration de leur condition sanitaire pour leur plein épanouissement, et par
+ricochet, le bien-être de l’ensemble de la population togolaise à travers la promotion
+des produits locaux et des talents africains.
+              <br>
+              <a href="#contact" class="android-link mdl-typography--font-light">Nous écrire</a>
+            </p>
+          </div>
+          <div class="android-customized-section-image"></div>
+        </div>
+        <div class="android-more-section" id="blog">
+          <div class="android-section-title mdl-typography--display-1-color-contrast">Nos actualités</div>
+          <div class="android-card-container mdl-grid">
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" *ngFor="let actu of actus;let i =index">
+              <div class="mdl-card__media">
+                <img src="assets/img/bonheur6.jpg">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Actualité {{i}}</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="index.html">
+                   voir détail
+                   <i class="fa fa-chevron-right"></i>
+                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="android-more-section" id="contact">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Remplissez le formulaire ci dessous pour nous contacter</div>
+            <div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone"><img src="assets/img/more-from-3.png" class="contactimg"></div>
+  <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--11-col-phone">
+  <form>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Email...</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Sujet...</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <textarea rows="10" class="mdl-textfield__input" type="text" id="sample3"></textarea>
+    <label class="mdl-textfield__label" for="sample3">Votre message...</label>
+  </div>
+  <p>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  Envoyer
+</button>
+  </p>
+</form>
+</div>
+</div>
+         </div>
+        <footer class="android-footer mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Menu</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a [routerLink]="['/chat']">Chat</a></li>
+        <li><a [routerLink]="['/forum']">Forum</a></li>
+        <li><a [routerLink]="['/photos']">Photos</a></li>
+        <li><a [routerLink]="['/videos']">Videos</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Section</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#about">A propos</a></li>
+        <li><a href="#blog">Actualités</a></li>
+        <li><a href="#photos">Galerie</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-logo">Top Bonheur</div>
+    <ul class="mdl-mega-footer__link-list">
+      <li><a [routerLink]="['/']">Accueil</a></li>
+      <li><a >&copy; Tous droits reservés</a></li>
+    </ul>
+  </div>
+
+</footer>
+<dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Formation titre</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        Allowing us to collect data will let us get you the information you want faster.
+        Allowing us to collect data will let us get you the information you want faster.
+        Allowing us to collect data will let us get you the information you want faster.
+        Allowing us to collect data will let us get you the information you want faster.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" (click)="closeDialog()">Disagree</button>
+    </div>
+  </dialog>    
+  </div>
+    </div>

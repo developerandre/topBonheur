@@ -1,0 +1,47 @@
+i<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="fixed-header-drawer-exp">
+          <i class="material-icons"></i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Questions</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="" *ngFor="let tag of tags;let i =index">Question {{i}}</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">  
+       <ol class="chat">
+    <li class="other">
+        <div class="avatar"><img src="assets/img/co1.jpg" draggable="false"/></div>
+      <div class="msg">
+        <p>Hola!</p>
+        <p>Te vienes a cenar al centro? </p>
+        <time>20:17</time>
+      </div>
+    </li>
+     <li class="other">
+        <div class="avatar"><img src="assets/img/co1.jpg" draggable="false"/></div>
+      <div class="msg">
+        <p>Hola!</p>
+        <p>Te vienes a cenar al centro? </p>
+        <time>20:17</time>
+      </div>
+    </li>
+    </ol>            
+    </div>
+  </main>
+</div>
