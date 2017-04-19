@@ -6,7 +6,6 @@ import { DataService } from '../data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-
 export class HomeComponent implements OnInit {
   actus:Array<any> = new Array(10);
   formations:Array<any> = new Array(10);

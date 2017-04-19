@@ -168,7 +168,7 @@ a img{
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url('/assets/img/bonheur17.jpg') center 30% no-repeat;
+  background: url('/assets/img/top.jpg') center 30% no-repeat;
   background-size: cover;
 }
 
@@ -295,7 +295,7 @@ a img{
 
 .android-wear-section {
   position: relative;
-  background: url('/assets/img/bonheur10.jpg') center top no-repeat;
+  background: url('/assets/img/X.jpg') center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -366,7 +366,7 @@ a img{
   }
 
 .android-customized-section-image {
-  background: url('/assets/img/bonheur5.jpg') center top no-repeat;
+  background: url('/assets/img/ccvv.jpg') center top no-repeat;
   background-size: cover;
   height: 400px;
 }

@@ -4,7 +4,7 @@
   <div class="mdl-layout__drawer-button side"><i class="fa fa-bars" style="color:black;"></i></div>       
  <div class="mdl-layout__header-row">
           <span class="android-title mdl-layout-title">
-            <img class="android-logo-image" src="assets/img/bonheur1.jpg" style="width:40px;height:40px;border-radius:50%;">
+            <img class="android-logo-image" src="assets/img/Logo.jpg" style="width:70px;height:70px;border-radius:50%;">
           </span>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
@@ -26,36 +26,33 @@
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
-            <img class="android-logo-image" src="assets/img/android-logo.png">
+            <img class="android-logo-image" src="assets/img/Logo.jpg">
           </span>
           <button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
             <i class="fa fa-ellipsis-v" style="color:black;"></i>
           </button>
           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-            <li class="mdl-menu__item"><a [routerLink]="['/chat']">Chat avec le service client</a></li>
-            <li class="mdl-menu__item"><a [routerLink]="['/forum']">Forum</a></li>
-            <li  class="mdl-menu__item"><a [routerLink]="['/photos']">Nos photos</a></li>
-            <li class="mdl-menu__item"><a [routerLink]="['/videos']">Nos videos</a></li>
-            <li class="mdl-menu__item"><a [routerLink]="['/login']">Se connecter</a></li>
+            <li class="mdl-menu__item"><a [routerLink]="['/forum']" style="font-size:1.1em;text-decoration:none;color:black;">Forum</a></li>
+            <li class="mdl-menu__item"><a [routerLink]="['/produits']" style="font-size:1.1em;text-decoration:none;color:black;">Produits</a></li>
+            <li class="mdl-menu__item"><a [routerLink]="['/login']" style="font-size:1.1em;text-decoration:none;color:black;">Se connecter</a></li>
           </ul>
         </div>
       </div>
 
       <div class="android-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <img class="android-logo-image" src="assets/img/android-logo-white.png">
+          <img class="android-logo-image" src="assets/img/Logo.jpg">
         </span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="#blog">Actualités</a>
+          <a class="mdl-navigation__link" href="#formations">Formations</a>
           <a class="mdl-navigation__link" href="#photos">Galerie</a>
           <a class="mdl-navigation__link" href="#about">A propos</a>
           <a class="mdl-navigation__link" href="#contact">Contactez-nous</a>
           <div class="android-drawer-separator"></div>
           <span class="mdl-navigation__link" href=""> Menu </span>
-          <a class="mdl-navigation__link" [routerLink]="['/chat']">Chat avec le service client</a>
           <a class="mdl-navigation__link" [routerLink]="['/forum']">Forum</a>
-          <a class="mdl-navigation__link" [routerLink]="['/photos']">Nos photos</a>
-          <a class="mdl-navigation__link" [routerLink]="['/videos']">Nos videos</a>
+          <a class="mdl-navigation__link" [routerLink]="['/produits']">Nos produits</a>
           <a class="mdl-navigation__link" [routerLink]="['/login']">Se connecter</a>
         </nav>
       </div>
@@ -63,10 +60,10 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
-          <div class="logo-font android-slogan">Top Bonheur</div>
-          <div class="logo-font android-sub-slogan">Le développement d’une nation, basé sur la consommation des produits locaux.</div>
+          <div class="logo-font android-slogan"i style="color:white;">Top Bonheur</div>
+          <div class="logo-font android-sub-slogan" style="color:white;">Le développement d’une nation, basé sur la consommation des produits locaux.</div>
           <div class="logo-font android-create-character">
-            <a href="index.html"><img src="assets/img/andy.png">Nous vous invitons à nous faire confiance en adhérant à TOP BONHEUR pour bénéficier des avantages y afférents</a>
+            <a href="index.html" style="color:white;"><img src="assets/img/andy.png">Nous vous invitons à nous faire confiance en adhérant à TOP BONHEUR pour bénéficier des avantages y afférents</a>
           </div>
 
           <a href="#about">
@@ -75,13 +72,13 @@
             </button>
           </a>
         </div>
-        <div class="android-screen-section mdl-typography--text-center">
+        <div class="android-screen-section mdl-typography--text-center" id="formations">
           <a name="screens"></a>
-          <div class="mdl-typography--display-1-color-contrast">Formation et produits</div>
+          <div class="mdl-typography--display-1-color-contrast">Formations</div>
           <div class="android-screens">
-            <div class="android-tv android-screen" *ngFor="let formation of formations;let i = index">
+            <div class="android-tv android-screen" *ngFor="let formation of [1,2,7,8,10];let i = index">
               <a class="android-image-link" id="show-dialog" (click)="showDialog(i)">
-                <img class="android-screen-image" src="assets/img/bonheur18.jpg">
+                <img class="android-screen-image" src="assets/img/bonheur{{formation}}.jpg">
               </a>
               <a class="android-link mdl-typography--font-regular mdl-typography--text-uppercase" href="index.html">Formation {{i}}</a>
             </div>
@@ -124,9 +121,9 @@ des produits locaux et des talents africains.
           <div class="android-section-title mdl-typography--display-1-color-contrast">Nos actualités</div>
           <div class="android-card-container mdl-grid">
 
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" *ngFor="let actu of actus;let i =index">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" *ngFor="let actu of [5,8,9,10,11,14,15];let i =index">
               <div class="mdl-card__media">
-                <img src="assets/img/bonheur6.jpg">
+                <img src="assets/img/bonheur{{actu}}.jpg">
               </div>
               <div class="mdl-card__title">
                  <h4 class="mdl-card__title-text">Actualité {{i}}</h4>
@@ -146,7 +143,7 @@ des produits locaux et des talents africains.
          <div class="android-more-section" id="contact">
             <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Remplissez le formulaire ci dessous pour nous contacter</div>
             <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone"><img src="assets/img/more-from-3.png" class="contactimg"></div>
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--hide-phone"><img src="assets/img/bonheur3.jpg" style="width:90%;height:90%;" class="contactimg"></div>
   <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--11-col-phone">
   <form>
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -206,19 +203,5 @@ des produits locaux et des talents africains.
   </div>
 
 </footer>
-<dialog class="mdl-dialog">
-    <h4 class="mdl-dialog__title">Formation titre</h4>
-    <div class="mdl-dialog__content">
-      <p>
-        Allowing us to collect data will let us get you the information you want faster.
-        Allowing us to collect data will let us get you the information you want faster.
-        Allowing us to collect data will let us get you the information you want faster.
-        Allowing us to collect data will let us get you the information you want faster.
-      </p>
-    </div>
-    <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button close" (click)="closeDialog()">Disagree</button>
-    </div>
-  </dialog>    
   </div>
     </div>
